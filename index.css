@@ -2,10 +2,10 @@ img{
     width: 200px;
 }
 
-#dis{
+/* #dis{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-}
+} */
 
 .style{
     margin: 20px;
@@ -18,3 +18,34 @@ img{
     background-color: rgb(75, 189, 189);
     
 }
+
+#dis {
+    display: grid;
+    gap: 15px;
+}
+
+
+#dis {
+    display: grid;
+    gap: 15px;
+}
+
+
+@media (max-width: 576px) {
+    #dis {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+    #dis {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (min-width: 992px) {
+    #dis {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}
+
