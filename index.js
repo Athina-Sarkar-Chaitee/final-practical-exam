@@ -14,6 +14,7 @@ function find(){
 
 function find2(data){
 
+
     let allMeal = data.meals ;
 
     let disArea = document.getElementById("dis");
@@ -22,13 +23,26 @@ function find2(data){
     if(allMeal.length > 5){
         for(let i = 1; i<= 5; i++){
 
+            if(i==5){
+
             let newDiv = document.createElement("div");
-            newDiv.innerHTML = `Meal id: ${allMeal[i-1].idMeal} <br> Meal Name: ${allMeal[i-1].strMeal} <br> <img src="${allMeal[i-1].strMealThumb}"> <br> Cooking Instruction: <br> ${allMeal[i-1].strInstructions} <br> <button onclick="show()">Show More</button> ` ;
+            newDiv.innerHTML = `Meal id: ${allMeal[i-1].idMeal} <br> Meal Name: ${allMeal[i-1].strMeal} <br> <img src="${allMeal[i-1].strMealThumb}"> <br> Cooking Instruction: <br> ${allMeal[i-1].strInstructions} <br> <br> <button id="style2" onclick="show()">Show More Items</button> ` ;
+            
     
     
             newDiv.classList.add("style");
             disArea.appendChild(newDiv);
         }
+        else{
+            let newDiv = document.createElement("div");
+            newDiv.innerHTML = `Meal id: ${allMeal[i-1].idMeal} <br> Meal Name: ${allMeal[i-1].strMeal} <br> <img src="${allMeal[i-1].strMealThumb}"> <br> Cooking Instruction: <br> ${allMeal[i-1].strInstructions}  ` ;
+    
+    
+            newDiv.classList.add("style");
+            disArea.appendChild(newDiv);
+
+        }
+    }
        
 
 
